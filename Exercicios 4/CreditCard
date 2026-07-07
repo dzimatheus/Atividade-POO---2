@@ -1,0 +1,8 @@
+package POO.Exercicio4;
+
+public class CreditCard implements PaymentMethod {
+    @Override
+    public void processarPagamento(double valor) {
+        System.out.println("Processando pagamento de R$" + valor + " via Cartão de Crédito.");
+    }
+}
