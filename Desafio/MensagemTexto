@@ -1,0 +1,7 @@
+package POO.Desafio;
+
+public class MensagemTexto extends Mensagem {
+    private String texto;
+    public MensagemTexto(Usuario remetente, String texto) { super(remetente); this.texto = texto; }
+    @Override public void exibirMensagem() { System.out.println("[" + getRemetente().getNome() + "]: " + texto); }
+}
