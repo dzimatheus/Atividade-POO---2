@@ -1,0 +1,11 @@
+package POO.Exercicio4;
+
+public class Main {
+    public static void main(String[] args) {
+        PaymentMethod pagamento = new Pix();
+        pagamento.processarPagamento(150.00);
+
+        pagamento = new CreditCard();
+        pagamento.processarPagamento(45.90);
+    }
+}
