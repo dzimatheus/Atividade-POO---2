@@ -1,0 +1,5 @@
+package POO.Exercicio4;
+
+public interface PaymentMethod {
+    void processarPagamento(double valor);
+}
