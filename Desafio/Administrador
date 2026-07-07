@@ -1,0 +1,11 @@
+package POO.Desafio;
+
+public class Administrador extends Usuario {
+    public Administrador(String nome) {
+        super(nome); // Chama o construtor da superclasse Usuario
+    }
+    
+    public void moderarGrupo() {
+        System.out.println("O administrador " + getNome() + " realizou uma ação de moderação.");
+    }
+}
