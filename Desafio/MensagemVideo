@@ -1,0 +1,7 @@
+package POO.Desafio;
+
+class MensagemVideo extends Mensagem {
+    private String resolucao;
+    public MensagemVideo(Usuario remetente, String resolucao) { super(remetente); this.resolucao = resolucao; }
+    @Override public void exibirMensagem() { System.out.println("[" + getRemetente().getNome() + "] enviou um Vídeo em " + resolucao); }
+}
