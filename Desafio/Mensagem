@@ -1,0 +1,19 @@
+package POO.Desafio;
+
+import java.time.LocalDateTime;
+
+public abstract class Mensagem {
+    private Usuario remetente;
+    private LocalDateTime dataEnvio;
+
+    public Mensagem(Usuario remetente) {
+        this.remetente = remetente;
+        this.dataEnvio = LocalDateTime.now();
+    }
+
+    public Usuario getRemetente() { return remetente; }
+    public LocalDateTime getDataEnvio() { return dataEnvio; }
+
+    // Método abstrato que cada tipo de mensagem exibirá de forma polimórfica
+    public abstract void exibirMensagem();
+}
