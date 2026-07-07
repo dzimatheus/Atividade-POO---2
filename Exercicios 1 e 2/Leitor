@@ -1,0 +1,31 @@
+package POO.Exercicio1e2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Leitor {
+    private String nome;
+    private int idade;
+    private List<Book> livrosLidos; 
+
+    public Leitor(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+        this.livrosLidos = new ArrayList<>();
+    }
+
+    public void adicionarLivroAoHistorico(Book livro) {
+        if (!livrosLidos.contains(livro)) {
+            this.livrosLidos.add(livro);
+        }
+    }
+
+    // Encapsulamento: Getters e Setters
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+
+    public int getIdade() { return idade; }
+    public void setIdade(int idade) { this.idade = idade; }
+
+    public List<Book> getLivrosLidos() { return livrosLidos; }
+}
