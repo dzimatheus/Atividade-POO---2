@@ -1,0 +1,7 @@
+package POO.Desafio;
+
+class MensagemImagem extends Mensagem {
+    private String urlImagem;
+    public MensagemImagem(Usuario remetente, String urlImagem) { super(remetente); this.urlImagem = urlImagem; }
+    @Override public void exibirMensagem() { System.out.println("[" + getRemetente().getNome() + "] enviou uma Imagem: <" + urlImagem + ">"); }
+}
