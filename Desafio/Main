@@ -1,0 +1,22 @@
+package POO.Desafio;
+
+public class Main {
+    public static void main(String[] args) {
+        Grupo grupoFaculdade = new Grupo("Tópicos");
+
+        Usuario u1 = new Usuario("Matheus");
+        Administrador admin = new Administrador("Prof. Felipe");
+
+        grupoFaculdade.entrarNoGrupo(u1);
+        grupoFaculdade.entrarNoGrupo(admin);
+
+        // Enviando diferentes mídias usando polimorfismo
+        grupoFaculdade.enviarMensagem(new MensagemTexto(u1, "Olá pessoal, alguém tem o PDF da aula 4?"));
+        grupoFaculdade.enviarMensagem(new MensagemImagem(admin, "upload/slide_aula4.png"));
+        grupoFaculdade.enviarMensagem(new MensagemAudio(u1, 15));
+        grupoFaculdade.enviarMensagem(new MensagemVideo(admin, "1080p"));
+
+        // Exibe todo o histórico de mensagens tratadas de forma uniforme
+        grupoFaculdade.mostrarChat();
+    }
+}
