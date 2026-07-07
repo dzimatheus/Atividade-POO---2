@@ -1,0 +1,8 @@
+package POO.Exercicio4;
+
+public class Money implements PaymentMethod {
+    @Override
+    public void processarPagamento(double valor) {
+        System.out.println("Pagamento de R$" + valor + " realizado em Dinheiro (Espécie).");
+    }
+}
