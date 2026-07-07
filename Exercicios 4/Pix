@@ -1,0 +1,8 @@
+package POO.Exercicio4;
+
+public class Pix implements PaymentMethod {
+    @Override
+    public void processarPagamento(double valor) {
+        System.out.println("Gerando QR Code Pix no valor de R$" + valor + " para pagamento instantâneo.");
+    }
+}
