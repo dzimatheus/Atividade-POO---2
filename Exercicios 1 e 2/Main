@@ -1,0 +1,30 @@
+package POO.Exercicio1e2;
+
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        Library biblioteca = new Library();
+
+        // Criando os livros 
+        Book livro1 = new Book("978", "MAC", "Vini JR");
+        Book livro2 = new Book("123", "POO", "Neymar JR");
+        
+        biblioteca.adicionarLivro(livro1);
+        biblioteca.adicionarLivro(livro2);
+
+        // Criando o leitor
+        Leitor leitor = new Leitor("Matheus D. Boikivski", 20);
+
+        String termoBusca = "POO";
+        System.out.println("Buscando livro por: " + termoBusca);
+        List<Book> livrosEncontrados = biblioteca.buscarPorTituloOuAutor(termoBusca);
+
+        if (!livrosEncontrados.isEmpty()) {
+            Book livroDesejado = livrosEncontrados.get(0);
+            biblioteca.emprestarLivro(livroDesejado, leitor);
+        } else {
+            System.out.println("Nenhum livro encontrado.");
+        }
+    }
+}
