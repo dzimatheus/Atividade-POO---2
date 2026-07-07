@@ -1,0 +1,7 @@
+package POO.Desafio;
+
+class MensagemAudio extends Mensagem {
+    private int duracaoSegundos;
+    public MensagemAudio(Usuario remetente, int duracaoSegundos) { super(remetente); this.duracaoSegundos = duracaoSegundos; }
+    @Override public void exibirMensagem() { System.out.println("[" + getRemetente().getNome() + "] enviou um Áudio de " + duracaoSegundos + "s"); }
+}
