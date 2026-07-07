@@ -1,0 +1,32 @@
+package POO.Exercicio1e2;
+
+import java.time.LocalDateTime;
+
+public class Book {
+    private final String isbn;
+    private String titulo;
+    private String autor;
+    private Leitor leitorAtual; 
+    private LocalDateTime momentoEmprestado; 
+
+    public Book(String isbn, String titulo, String autor) {
+        this.isbn = isbn;
+        this.titulo = titulo;
+        this.autor = autor;
+    }
+
+    // Getters e Setters
+    public String getIsbn() { return isbn; }
+
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+
+    public String getAutor() { return autor; }
+    public void setAutor(String autor) { this.autor = autor; }
+
+    public Leitor getLeitorAtual() { return leitorAtual; }
+    public void setLeitorAtual(Leitor leitorAtual) { this.leitorAtual = leitorAtual; }
+
+    public LocalDateTime getMomentoEmprestado() { return momentoEmprestado; }
+    public void setMomentoEmprestado(LocalDateTime momentoEmprestado) { this.momentoEmprestado = momentoEmprestado; }
+}
