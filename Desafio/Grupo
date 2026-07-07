@@ -1,0 +1,29 @@
+package POO.Desafio;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Grupo {
+    private String nomeGrupo;
+    private List<Usuario> participantes;
+    private List<Mensagem> chatHistory;
+
+    public Grupo(String nomeGrupo) {
+        this.nomeGrupo = nomeGrupo;
+        this.participantes = new ArrayList<>();
+        this.chatHistory = new ArrayList<>();
+    }
+
+    public void entrarNoGrupo(Usuario u) { participantes.add(u); }
+
+    public void enviarMensagem(Mensagem msg) {
+        chatHistory.add(msg);
+    }
+
+    public void mostrarChat() {
+        System.out.println("--- Chat do Grupo: " + nomeGrupo + " ---");
+        for (Mensagem msg : chatHistory) {
+            msg.exibirMensagem();
+        }
+    }
+}
