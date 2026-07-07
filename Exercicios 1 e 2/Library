@@ -1,0 +1,37 @@
+package POO.Exercicio1e2;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+    private List<Book> livros; 
+
+    public Library() {
+        this.livros = new ArrayList<>();
+    }
+
+    public void adicionarLivro(Book livro) {
+        this.livros.add(livro);
+    }
+
+    // Procura por título ou autor
+    public List<Book> buscarPorTituloOuAutor(String termo) {
+        List<Book> resultados = new ArrayList<>();
+        for (Book livro : livros) {
+            if (livro.getTitulo().equalsIgnoreCase(termo) || livro.getAutor().equalsIgnoreCase(termo)) {
+                resultados.add(livro);
+            }
+        }
+        return resultados;
+    }
+
+    // Empresta o livro para um leitor
+    public void emprestarLivro(Book livro, Leitor leitor) {
+        livro.setMomentoEmprestado(LocalDateTime.now());
+        livro.setLeitorAtual(leitor);
+        leitor.adicionarLivroAoHistorico(livro);
+        
+        System.out.println("Livro '" + livro.getTitulo() + "' emprestado para " + leitor.getNome() + " em: " + livro.getMomentoEmprestado());
+    }
+}
