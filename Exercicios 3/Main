@@ -1,0 +1,11 @@
+package POO.Exercicio3;
+
+public class Main {
+    public static void main(String[] args) {
+        Shape s1 = new Retangulo(5.0, 4.0);
+        Shape s2 = new Circulo(3.0);
+
+        System.out.println("Área do Retângulo: " + s1.calcularArea());
+        System.out.println("Perímetro do Círculo: " + s2.calcularPerimetro());
+    }
+}
